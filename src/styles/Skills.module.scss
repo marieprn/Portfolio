@@ -1,0 +1,66 @@
+@use 'variables' as *;
+
+.skills {
+  background: rgba($sage, 0.1);
+  padding: 80px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+
+  h2 {
+    font-family: $font-serif;
+    font-size: 32px;
+    color: $brown;
+  }
+}
+
+.tag {
+  font-size: 11px;
+  font-weight: 500;
+  color: $sage;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.sub {
+  font-size: 14px;
+  color: lighten($brown, 30%);
+  margin-bottom: 16px;
+}
+
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  justify-content: center;
+  max-width: 700px;
+}
+
+.chip {
+  background: $cream;
+  border: 1.5px solid rgba($terra, 0.2);
+  border-radius: 14px;
+  padding: 14px 22px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  min-width: 90px;
+  transition: transform 0.2s, border-color 0.2s;
+
+  &:hover {
+    transform: translateY(-4px);
+    border-color: $terra;
+  }
+}
+
+.icon {
+  font-size: 28px;
+}
+
+.name {
+  font-size: 12px;
+  font-weight: 500;
+  color: $brown;
+}
