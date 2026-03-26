@@ -1,0 +1,67 @@
+@use 'variables' as *;
+
+.contact {
+  background: $brown;
+  padding: 80px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  text-align: center;
+
+  h2 {
+    font-family: $font-serif;
+    font-size: 36px;
+    color: $cream;
+  }
+
+  p {
+    font-size: 15px;
+    color: rgba($cream, 0.7);
+    max-width: 420px;
+    line-height: 1.8;
+  }
+}
+
+.tag {
+  font-size: 11px;
+  font-weight: 500;
+  color: $amber;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.btns {
+  display: flex;
+  gap: 12px;
+  margin-top: 8px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.btnEmail {
+  background: $terra;
+  color: $cream;
+  padding: 12px 24px;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 500;
+  text-decoration: none;
+  transition: opacity 0.2s;
+
+  &:hover { opacity: 0.85; }
+}
+
+.btnOutline {
+  background: transparent;
+  color: $cream;
+  padding: 12px 24px;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 500;
+  text-decoration: none;
+  border: 1.5px solid rgba($cream, 0.25);
+  transition: border-color 0.2s;
+
+  &:hover { border-color: rgba($cream, 0.7); }
+}
