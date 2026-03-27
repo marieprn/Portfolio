@@ -1,10 +1,14 @@
 import styles from '../styles/ProjectDetail.module.scss'
 import { useParams, Link } from 'react-router-dom'
+import { useState } from 'react'
 import projects from '../data/projects'
+import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 
 function ProjectDetail() {
   const { slug } = useParams()
   const project = projects.find((p) => p.slug === slug)
+
+  const [current, setCurrent] = useState(0)
 
   if (!project) {
     return (
@@ -12,6 +16,20 @@ function ProjectDetail() {
         <p>Projet introuvable.</p>
         <Link to="/">Retour à l'accueil</Link>
       </main>
+    )
+  }
+
+  const hasMultipleImages = project.images.length > 1
+
+  const nextSlide = () => {
+    setCurrent((prev) =>
+      prev === project.images.length - 1 ? 0 : prev + 1
+    )
+  }
+
+  const prevSlide = () => {
+    setCurrent((prev) =>
+      prev === 0 ? project.images.length - 1 : prev - 1
     )
   }
 
@@ -35,33 +53,51 @@ function ProjectDetail() {
         </div>
 
         <div className={styles.links}>
-          
-          <a
-            href={project.live}
-            target="_blank"
-            rel="noreferrer"
-            className={styles.btnPrimary}
-          >
+          <a href={project.live} target="_blank" rel="noreferrer" className={styles.btnPrimary}>
             Voir le site live ↗
           </a>
 
-          <a
-            href={project.github}
-            target="_blank"
-            rel="noreferrer"
-            className={styles.btnSecondary}
-          >
+          <a href={project.github} target="_blank" rel="noreferrer" className={styles.btnSecondary}>
             GitHub
           </a>
-
         </div>
       </div>
 
-      <img
-        src={project.image}
-        alt={`Aperçu du projet ${project.title}`}
-        className={styles.img}
-      />
+      {/* CARROUSEL */}
+      <div className={styles.carousel}>
+        {hasMultipleImages && (
+          <button onClick={prevSlide} className={styles.arrow}>
+            <FaArrowLeft />
+          </button>
+        )}
+
+        <img
+          src={project.images[current]}
+          alt={`${project.title} ${current + 1}`}
+          className={styles.img}
+        />
+
+        {hasMultipleImages && (
+          <button onClick={nextSlide} className={styles.arrow}>
+            <FaArrowRight />
+          </button>
+        )}
+      </div>
+
+      {/* DOTS */}
+      {hasMultipleImages && (
+        <div className={styles.dots}>
+          {project.images.map((_, index) => (
+            <span
+              key={index}
+              className={`${styles.dot} ${
+                index === current ? styles.active : ''
+              }`}
+              onClick={() => setCurrent(index)}
+            />
+          ))}
+        </div>
+      )}
 
       <div className={styles.content}>
         <div className={styles.block}>
