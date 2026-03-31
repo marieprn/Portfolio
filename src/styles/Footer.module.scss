@@ -1,7 +1,7 @@
 @use 'variables' as *;
 
 .footer {
-  background: darken($brown, 5%);
+  background: $brown;
   padding: 20px 80px;
   display: flex;
   justify-content: space-between;
@@ -10,13 +10,14 @@
 
 .logo {
   font-family: $font-serif;
-  font-size: 18px;
-  color: rgba($cream, 0.5);
+  font-style: italic;
+  font-size: 20px;
+  color: $cream;
 }
 
 .text {
   font-size: 12px;
-  color: rgba($cream, 0.35);
+  color: rgba($cream, 0.4);
 }
 
 .links {

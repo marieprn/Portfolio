@@ -1,17 +1,20 @@
 // Couleurs
-$terra:  #D4522A;   // orange brique
-$cream:  #F7F0DC;   // crème chaud
-$sage:   #6B8F3E;   // vert avocat
-$brown:  #2C1A0E;   // brun foncé
-$amber:  #F0A500;   // jaune soleil
-$yellow: #F5C842;   // jaune vif
-$rust:   #C13B1B;   // rouge rouille
-$teal:   #3A8C7E;   // vert canard
+$terra:  #D4522A;
+$cream:  #F7F0DC;
+$sage:   #6B8F3E;
+$brown:  #2C1A0E;
+$amber:  #F0A500;
+$yellow: #F5C842;
+$rust:   #C13B1B;
+$pink:   #E8847A;
+$blue:   #7BBFCC;
 
 // Fonts
 $font-serif: 'Playfair Display', serif;
 $font-sans:  'DM Sans', sans-serif;
 
-// Espacements
-$radius: 16px;
+// Bordures épaisses style rétro
+$border: 3px solid $brown;
+$radius-xl: 24px;
+$radius-lg: 16px;
 $radius-sm: 8px;

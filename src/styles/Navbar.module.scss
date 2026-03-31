@@ -1,7 +1,7 @@
 @use 'variables' as *;
 
 .navbar {
-  background: $brown;
+  background: $cream;
   padding: 14px 40px;
   display: flex;
   justify-content: space-between;
@@ -9,13 +9,15 @@
   position: sticky;
   top: 0;
   z-index: 100;
+  border-bottom: $border;
+}
 
-  .logo {
-    font-family: $font-serif;
-    font-size: 22px;
-    color: $cream;
-    text-decoration: none;
-  }
+.logo {
+  font-family: $font-serif;
+  font-size: 24px;
+  font-style: italic;
+  color: $brown;
+  text-decoration: none;
 }
 
 .links {
@@ -25,26 +27,24 @@
 
   a {
     font-size: 14px;
-    color: #C8B89A;
+    color: $brown;
     text-decoration: none;
+    font-weight: 500;
     transition: color 0.2s;
 
-    &:hover {
-      color: $cream;
-    }
+    &:hover { color: $terra; }
   }
 }
 
 .cvBtn {
   background: $terra;
   color: $cream !important;
-  padding: 7px 18px;
+  padding: 8px 20px;
   border-radius: 20px;
-  font-size: 13px;
+  font-size: 13px !important;
   font-weight: 500;
-  transition: opacity 0.2s !important;
+  border: 2px solid $brown;
+  transition: background 0.2s;
 
-  &:hover {
-    opacity: 0.85;
-  }
+  &:hover { background: $rust; }
 }

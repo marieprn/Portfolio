@@ -1,23 +1,25 @@
 @use 'variables' as *;
 
 .contact {
-  background: $brown;
+  background: $sage;
   padding: 80px;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 16px;
   text-align: center;
+  border-bottom: $border;
 
   h2 {
     font-family: $font-serif;
-    font-size: 36px;
+    font-style: italic;
+    font-size: 40px;
     color: $cream;
   }
 
   p {
     font-size: 15px;
-    color: rgba($cream, 0.7);
+    color: rgba($cream, 0.85);
     max-width: 420px;
     line-height: 1.8;
   }
@@ -26,7 +28,7 @@
 .tag {
   font-size: 11px;
   font-weight: 500;
-  color: $amber;
+  color: $yellow;
   text-transform: uppercase;
   letter-spacing: 0.1em;
 }
@@ -42,26 +44,27 @@
 .btnEmail {
   background: $terra;
   color: $cream;
-  padding: 12px 24px;
-  border-radius: 10px;
+  padding: 12px 28px;
+  border-radius: $radius-xl;
   font-size: 14px;
   font-weight: 500;
   text-decoration: none;
-  transition: opacity 0.2s;
+  border: 2px solid $brown;
+  transition: background 0.2s;
 
-  &:hover { opacity: 0.85; }
+  &:hover { background: $rust; }
 }
 
 .btnOutline {
-  background: transparent;
-  color: $cream;
-  padding: 12px 24px;
-  border-radius: 10px;
+  background: $cream;
+  color: $brown;
+  padding: 12px 28px;
+  border-radius: $radius-xl;
   font-size: 14px;
   font-weight: 500;
   text-decoration: none;
-  border: 1.5px solid rgba($cream, 0.25);
-  transition: border-color 0.2s;
+  border: 2px solid $brown;
+  transition: background 0.2s;
 
-  &:hover { border-color: rgba($cream, 0.7); }
+  &:hover { background: darken($cream, 5%); }
 }

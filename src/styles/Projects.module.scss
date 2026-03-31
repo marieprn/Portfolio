@@ -7,10 +7,12 @@
   flex-direction: column;
   align-items: center;
   gap: 14px;
+  border-bottom: $border;
 
   h2 {
     font-family: $font-serif;
-    font-size: 32px;
+    font-style: italic;
+    font-size: 36px;
     color: $brown;
     margin-bottom: 16px;
   }
@@ -29,39 +31,37 @@
   grid-template-columns: 1fr 1fr;
   gap: 24px;
   width: 100%;
-  max-width: 900px;
+  max-width: 960px;
 }
 
 .card {
-  background: #fff;
-  border-radius: 16px;
+  background: $cream;
+  border-radius: $radius-xl;
   overflow: hidden;
-  border: 1px solid rgba($brown, 0.1);
-  transition: transform 0.2s, box-shadow 0.2s;
+  border: 3px solid $brown;
+  transition: transform 0.2s;
 
-  &:hover {
-    transform: translateY(-6px);
-    box-shadow: 0 12px 32px rgba($brown, 0.1);
-  }
+  &:first-child { background: $blue; }
+  &:last-child  { background: $yellow; }
+
+  &:hover { transform: translateY(-6px); }
 }
 
 .imgWrapper {
   width: 100%;
-  height: 220px;
+  height: 200px;
   overflow: hidden;
-  background: rgba($brown, 0.05);
+  border-bottom: 3px solid $brown;
 }
 
 .img {
-  width: 436px;
+  width: 100%;
   height: 100%;
   object-fit: cover;
   object-position: top;
   transition: transform 0.3s;
 
-  .card:hover & {
-    transform: scale(1.03);
-  }
+  .card:hover & { transform: scale(1.03); }
 }
 
 .body {
@@ -72,14 +72,16 @@
 
   h3 {
     font-family: $font-serif;
-    font-size: 20px;
+    font-style: italic;
+    font-size: 22px;
     color: $brown;
   }
 
   p {
     font-size: 13px;
-    color: lighten($brown, 25%);
+    color: $brown;
     line-height: 1.7;
+    opacity: 0.8;
   }
 }
 
@@ -94,8 +96,9 @@
   font-weight: 500;
   padding: 3px 10px;
   border-radius: 20px;
-  background: rgba($sage, 0.15);
-  color: $sage;
+  background: $cream;
+  color: $brown;
+  border: 2px solid $brown;
 }
 
 .footer {
@@ -109,14 +112,15 @@
   background: $terra;
   color: $cream;
   padding: 10px;
-  border-radius: 8px;
+  border-radius: $radius-xl;
   font-size: 13px;
   font-weight: 500;
   text-decoration: none;
   text-align: center;
-  transition: opacity 0.2s;
+  border: 2px solid $brown;
+  transition: background 0.2s;
 
-  &:hover { opacity: 0.85; }
+  &:hover { background: $rust; }
 }
 
 .btnSecondary {
@@ -124,13 +128,13 @@
   background: transparent;
   color: $brown;
   padding: 10px;
-  border-radius: 8px;
+  border-radius: $radius-xl;
   font-size: 13px;
   font-weight: 500;
   text-decoration: none;
   text-align: center;
-  border: 1.5px solid rgba($brown, 0.2);
-  transition: border-color 0.2s;
+  border: 2px solid $brown;
+  transition: background 0.2s;
 
-  &:hover { border-color: rgba($brown, 0.5); }
+  &:hover { background: rgba($brown, 0.08); }
 }
