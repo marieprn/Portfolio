@@ -1,4 +1,5 @@
 import styles from '../styles/Hero.module.scss'
+import photo from '../assets/marie.jpg';
 
 function Hero() {
   return (
@@ -20,7 +21,9 @@ function Hero() {
         </div>
       </div>
       <div className={styles.right}>
-        <div className={styles.photo}>M</div>
+        <div className={styles.photo}>
+          <img src={photo} alt="photo de Marie" />
+        </div>
         <div className={styles.stack}>
           <span>React</span>
           <span>SCSS</span>
