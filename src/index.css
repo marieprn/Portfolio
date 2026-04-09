@@ -108,3 +108,27 @@ code {
   padding: 4px 8px;
   background: var(--code-bg);
 }
+
+#hero,
+#apropos,
+#competences,
+#projets,
+#contact {
+  scroll-margin-top: 50px;
+}
+
+header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+:focus-visible {
+  outline: 3px solid #D4522A;
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+:focus:not(:focus-visible) {
+  outline: none;
+}

@@ -2,13 +2,12 @@
 
 .hero {
   background: $cream;
-  padding: 60px 80px;
+  padding: 0px 80px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   gap: 40px;
   min-height: calc(100vh - 60px);
-  border-bottom: $border;
 }
 
 .left {
@@ -31,12 +30,11 @@
   align-items: center;
   gap: 8px;
   background: $sage;
-  color: $cream;
+  color: $brown;
   font-size: 13px;
   font-weight: 500;
   padding: 6px 14px;
   border-radius: 20px;
-  border: 2px solid $brown;
   width: fit-content;
 
   &::before {
@@ -70,17 +68,17 @@
   display: flex;
   gap: 14px;
   margin-top: 8px;
+  justify-content: center;
 }
 
 .btnPrimary {
   background: $terra;
-  color: $cream;
+  color: $brown;
   padding: 14px 28px;
   border-radius: $radius-xl;
   font-size: 14px;
   font-weight: 500;
   text-decoration: none;
-  border: 2px solid $brown;
   transition: background 0.2s;
 
   &:hover { background: $rust; }
@@ -110,9 +108,8 @@
 .photo {
   width: 220px;
   height: 220px;
-  border-radius: 50%;
+  border-radius: 20px;
   background: $amber;
-  border: 3px solid $brown;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -120,6 +117,12 @@
   font-style: italic;
   font-size: 80px;
   color: $brown;
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+  }
 }
 
 .stack {
@@ -134,7 +137,38 @@
     border-radius: 20px;
     background: $yellow;
     color: $brown;
-    font-weight: 500;
-    border: 2px solid $brown;
+    font-weight: 700;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column;
+    padding: 40px 24px;
+    min-height: auto;
+    text-align: center;
+  }
+
+  .left {
+    align-items: center;
+
+    h1 { font-size: 40px; }
+  }
+
+  .sub { max-width: 100%; }
+
+  .ctas {
+    flex-direction: column;
+    width: 100%;
+
+    a { text-align: center; }
+  }
+
+  .right { order: -1; }
+
+  .photo {
+    width: 160px;
+    height: 160px;
+    font-size: 56px;
   }
 }

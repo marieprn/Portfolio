@@ -1,74 +1,111 @@
 @use 'variables' as *;
 
 .about {
-  background: $terra;
-  padding: 80px;
+  background: $cream;
+  padding: 50px 80px;
   display: flex;
-  gap: 64px;
-  align-items: flex-start;
-  border-bottom: $border;
+  flex-direction: column;
+  align-items: center;
 }
 
-.text {
-  flex: 1;
+.tag {
+  font-size: 50px;
+  padding: 10px;
+  font-weight: 500;
+  color: $terra;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  text-align: center;
+  display: block;
+  margin-bottom: 8px;
+}
+
+h2 {
+  font-family: $font-serif;
+  font-style: italic;
+  font-size: 24px;
+  color: $brown;
+  line-height: 1.3;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 24px;
+  max-width: 1100px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.textCard {
+  background: $terra;
+  border-radius: $radius-xl;
+  padding: 36px;
   display: flex;
   flex-direction: column;
   gap: 16px;
 
-  h2 {
-    font-family: $font-serif;
-    font-style: italic;
-    font-size: 36px;
-    color: $cream;
-    line-height: 1.3;
-  }
-
   p {
     font-size: 15px;
-    color: rgba($cream, 0.9);
+    color: $brown;
     line-height: 1.8;
   }
 }
 
-.tag {
-  font-size: 11px;
-  font-weight: 500;
-  color: $yellow;
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
-}
-
-.right {
+.profileCard {
+  background: $amber;
+  border-radius: $radius-xl;
+  padding: 36px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   gap: 12px;
-  min-width: 160px;
 }
 
 .photo {
-  width: 150px;
-  height: 150px;
+  width: 130px;
+  height: 130px;
   border-radius: 50%;
-  background: $amber;
-  border: 3px solid $brown;
+  background: $cream;
   display: flex;
   align-items: center;
   justify-content: center;
   font-family: $font-serif;
   font-style: italic;
-  font-size: 56px;
+  font-size: 52px;
   color: $brown;
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+  }
 }
 
 .name {
   font-family: $font-serif;
   font-style: italic;
   font-size: 20px;
-  color: $cream;
+  color: $brown;
 }
 
 .role {
   font-size: 13px;
-  color: rgba($cream, 0.75);
+  color: darken($amber, 30%);
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .about {
+    padding: 40px 24px;
+  }
+
+  .cards {
+    grid-template-columns: 1fr;
+  }
+
+  h2 { font-size: 28px; }
 }

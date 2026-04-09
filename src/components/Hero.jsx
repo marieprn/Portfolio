@@ -1,5 +1,5 @@
 import styles from '../styles/Hero.module.scss'
-import photo from '../assets/marie.jpg';
+import photo from '../assets/Marie.webp';
 
 function Hero() {
   return (
@@ -8,8 +8,7 @@ function Hero() {
         <span className={styles.badge}>Disponible · Open to work</span>
         <h1>
           Marie,<br />
-          développeuse<br />
-          <span className={styles.accent}>frontend.</span>
+          développeuse <span className={styles.accent}>frontend.</span>
         </h1>
         <p className={styles.sub}>
           Je crée des interfaces modernes, accessibles et responsive — 
@@ -17,7 +16,7 @@ function Hero() {
         </p>
         <div className={styles.ctas}>
           <a href="#projets" className={styles.btnPrimary}>Voir mes projets ↓</a>
-          <a href="/cv.pdf" download className={styles.btnSecondary}>Télécharger le CV</a>
+          
         </div>
       </div>
       <div className={styles.right}>

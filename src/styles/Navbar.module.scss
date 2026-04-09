@@ -6,10 +6,6 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  position: sticky;
-  top: 0;
-  z-index: 100;
-  border-bottom: $border;
 }
 
 .logo {
@@ -38,13 +34,33 @@
 
 .cvBtn {
   background: $terra;
-  color: $cream !important;
+  color: $brown;
   padding: 8px 20px;
   border-radius: 20px;
   font-size: 13px !important;
   font-weight: 500;
-  border: 2px solid $brown;
   transition: background 0.2s;
 
   &:hover { background: $rust; }
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    padding: 12px 20px;
+  }
+
+  .logo {
+    font-size: 20px;
+  }
+
+  .links {
+    gap: 12px;
+
+    a { font-size: 12px; }
+  }
+
+  .cvBtn {
+    padding: 6px 12px;
+    font-size: 11px !important;
+  }
 }

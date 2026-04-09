@@ -1,4 +1,5 @@
 import styles from '../styles/Contact.module.scss'
+import { FaEnvelope, FaGithub, FaLinkedin } from 'react-icons/fa'
 
 function Contact() {
   return (
@@ -6,36 +7,43 @@ function Contact() {
       <span className={styles.tag}>Contact</span>
       <h2>Travaillons ensemble</h2>
 
-      <p>
-        Disponible pour un CDI en frontend. N'hésitez pas à me contacter
-        pour discuter de vos projets.
-      </p>
-
-      <div className={styles.btns}>
+      <div className={styles.cards}>
         
         <a
           href="mailto:marie.prn77@gmail.com"
-          className={styles.btnEmail}
+          className={styles.card}
         >
-          ✉ Envoyer un email
+          <FaEnvelope className={styles.cardIcon} />
+          <span className={styles.cardTitle}>Email</span>
+          <span className={styles.cardDesc}>
+            Disponible pour un CDI frontend
+          </span>
         </a>
 
         <a
           href="https://github.com/marieprn"
           target="_blank"
           rel="noreferrer"
-          className={styles.btnOutline}
+          className={styles.card}
         >
-          GitHub
+          <FaGithub className={styles.cardIcon} />
+          <span className={styles.cardTitle}>GitHub</span>
+          <span className={styles.cardDesc}>
+            Voir mes projets et mon code
+          </span>
         </a>
 
         <a
           href="https://www.linkedin.com/in/marie-p%C3%A9ron-6563913a8/"
           target="_blank"
           rel="noreferrer"
-          className={styles.btnOutline}
+          className={styles.card}
         >
-          LinkedIn
+          <FaLinkedin className={styles.cardIcon} />
+          <span className={styles.cardTitle}>LinkedIn</span>
+          <span className={styles.cardDesc}>
+            Mon parcours professionnel
+          </span>
         </a>
 
       </div>

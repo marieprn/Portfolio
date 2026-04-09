@@ -1,70 +1,78 @@
 @use 'variables' as *;
 
 .contact {
-  background: $sage;
-  padding: 80px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 16px;
-  text-align: center;
+  background: $cream;
+  padding: 50px 80px;
   border-bottom: $border;
-
-  h2 {
-    font-family: $font-serif;
-    font-style: italic;
-    font-size: 40px;
-    color: $cream;
-  }
-
-  p {
-    font-size: 15px;
-    color: rgba($cream, 0.85);
-    max-width: 420px;
-    line-height: 1.8;
-  }
 }
 
 .tag {
-  font-size: 11px;
+  font-size: 50px;
+  padding: 10px;
   font-weight: 500;
-  color: $yellow;
+  color: $terra;
   text-transform: uppercase;
   letter-spacing: 0.1em;
+  text-align: center;
+  display: block;
+  margin-bottom: 8px;
 }
 
-.btns {
-  display: flex;
-  gap: 12px;
-  margin-top: 8px;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-
-.btnEmail {
-  background: $terra;
-  color: $cream;
-  padding: 12px 28px;
-  border-radius: $radius-xl;
-  font-size: 14px;
-  font-weight: 500;
-  text-decoration: none;
-  border: 2px solid $brown;
-  transition: background 0.2s;
-
-  &:hover { background: $rust; }
-}
-
-.btnOutline {
-  background: $cream;
+h2 {
+  font-family: $font-serif;
+  font-style: italic;
+  font-size: 24px;
   color: $brown;
-  padding: 12px 28px;
-  border-radius: $radius-xl;
-  font-size: 14px;
-  font-weight: 500;
-  text-decoration: none;
-  border: 2px solid $brown;
-  transition: background 0.2s;
+  text-align: center;
+  margin-bottom: 40px;
+}
 
-  &:hover { background: darken($cream, 5%); }
+.cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.card {
+  border-radius: $radius-xl;
+  padding: 32px 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  text-align: center;
+  text-decoration: none;
+  transition: transform 0.2s;
+
+  &:nth-child(1) { background: $terra; }
+  &:nth-child(2) { background: $sage; }
+  &:nth-child(3) { background: $blue; }
+
+  &:hover { transform: translateY(-4px); }
+}
+
+.cardIcon {
+  font-size: 36px;
+  color: $cream;
+}
+
+.cardTitle {
+  font-family: $font-serif;
+  font-style: italic;
+  font-size: 20px;
+  color: $brown;
+}
+
+.cardDesc {
+  font-size: 13px;
+  color: $brown;
+  line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+  .contact { padding: 40px 24px; }
+  .cards { grid-template-columns: 1fr; }
+  h2 { font-size: 28px; }
 }

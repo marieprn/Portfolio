@@ -11,7 +11,7 @@ function Navbar() {
         <a href="#contact">Contact</a>
         {/* <a href="/cv.pdf" download className={styles.cvBtn}>CV ↓</a> */}
         <a href="/cv.pdf" target="_blank" rel="noopener noreferrer" className={styles.cvBtn}>
-          Voir CV
+          Voir mon CV
         </a>
       </nav>
     </header>

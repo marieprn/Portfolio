@@ -17,7 +17,7 @@
 
 .text {
   font-size: 12px;
-  color: rgba($cream, 0.4);
+  color: $cream;
 }
 
 .links {
@@ -31,5 +31,14 @@
     transition: opacity 0.2s;
 
     &:hover { opacity: 0.7; }
+  }
+}
+
+@media (max-width: 768px) {
+  .footer {
+    flex-direction: column;
+    padding: 20px 24px;
+    gap: 8px;
+    text-align: center;
   }
 }
