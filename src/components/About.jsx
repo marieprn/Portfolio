@@ -1,5 +1,4 @@
 import styles from '../styles/About.module.scss'
-import photo from '../assets/Marie.webp';
 
 function About() {
   return (
@@ -22,13 +21,6 @@ function About() {
             Je recherche un premier poste en CDI pour continuer à progresser
             au sein d'une équipe — startup, agence, grand groupe ou structure à impact.
           </p>
-        </div>
-        <div className={styles.profileCard}>
-          <div className={styles.photo}>
-            <img src={photo} alt="photo de Marie" />
-          </div>
-          <span className={styles.name}>Marie</span>
-          <p className={styles.role}>Développeuse Frontend</p>
         </div>
       </div>
     </section>
