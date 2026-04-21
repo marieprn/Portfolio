@@ -1,0 +1,262 @@
+@use 'variables' as *;
+
+.detail {
+  background: $cream;
+  min-height: 100vh;
+  animation: fadeIn 0.5s ease;
+}
+
+/*TOP BAR*/
+
+.topBar {
+  background: $cream;
+  padding: 14px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.back {
+  color: $brown;
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+.topBarTitle {
+  font-family: $font-serif;
+  font-style: italic;
+  font-size: 18px;
+  color: $brown;
+}
+
+.topBarActions {
+  display: flex;
+  gap: 10px;
+}
+
+.topBarBtn {
+  font-size: 12px;
+  font-weight: 500;
+  padding: 6px 16px;
+  border-radius: 20px;
+  text-decoration: none;
+  border: 2px solid rgba($brown, 0.3);
+  color: $brown;
+  transition: border-color 0.2s;
+
+  &:hover { border-color: $brown; }
+
+  &:first-child {
+    background: $terra;
+    border-color: $terra;
+
+    &:hover { background: $rust; border-color: $rust; }
+  }
+}
+
+@media (max-width: 768px) {
+  .topBar {
+    padding: 12px 20px;
+    gap: 8px;
+  }
+
+  .topBarTitle { display: none; }
+
+  .topBarBtn { font-size: 11px; padding: 5px 12px; }
+}
+
+/*HERO*/
+
+.hero {
+  background: $cream;
+  padding: 30px 80px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.heroTitle {
+  font-family: $font-serif;
+  font-style: italic;
+  font-size: 52px;
+  color: $brown;
+  line-height: 1.1;
+}
+
+.heroDesc {
+  font-size: 16px;
+  color: $brown;
+  line-height: 1.8;
+  max-width: 560px;
+}
+
+.actions {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  margin-top: 8px;
+  flex-wrap: wrap;
+}
+
+.btnPrimary {
+  background: $terra;
+  color: $brown;
+  padding: 12px 28px;
+  border-radius: $radius-xl;
+  font-size: 14px;
+  font-weight: 500;
+  text-decoration: none;
+  transition: background 0.2s;
+
+  &:hover { background: $rust; }
+}
+
+.btnSecondary {
+  background: $terra;
+  color: $brown;
+  padding: 12px 28px;
+  border-radius: $radius-xl;
+  font-size: 14px;
+  font-weight: 500;
+  text-decoration: none;
+  transition: border-color 0.2s;
+
+  &:hover { border-color: $cream; }
+}
+
+/*IMAGE*/
+
+.imageWrapper {
+  background: $cream;
+  padding: 50px 80px;
+  display: flex;
+  justify-content: center;
+}
+
+.image {
+  width: 100%;
+  max-width: 860px;
+  height: 420px;
+  object-fit: cover;
+  object-position: top;
+  border-radius: $radius-xl;
+}
+
+/*STACK*/
+
+.stackSection {
+  background: $cream;
+  padding: 40px 80px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+.sectionLabel {
+  font-size: 11px;
+  font-weight: 500;
+  color: $terra;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: center;
+}
+
+.tech {
+  font-size: 12px;
+  font-weight: 500;
+  padding: 5px 14px;
+  border-radius: 20px;
+  background: $yellow;
+  color: $brown;
+}
+
+/*CONTENU*/
+
+.content {
+  background: $cream;
+  padding: 50px 80px 60px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.section {
+  border-radius: $radius-xl;
+  padding: 28px 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  transition: transform 0.2s;
+
+  &:nth-child(1) { background: $blue; }
+  &:nth-child(2) { background: $yellow; }
+  &:nth-child(3) { background: $pink; }
+  &:nth-child(4) { background: $amber; }
+  &:nth-child(5) { background: $sage; grid-column: span 2; }
+
+  &:hover { transform: translateY(-3px); }
+
+  h2 {
+    font-family: $font-serif;
+    font-style: italic;
+    font-size: 20px;
+    color: $brown;
+    margin-bottom: 20px;
+  }
+
+  p, li {
+    font-size: 14px;
+    color: $brown;
+    line-height: 1.8;
+    opacity: 0.85;
+  }
+}
+
+.list {
+  padding-left: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  list-style: none;
+  margin-top: 0px;
+}
+
+@media (max-width: 768px) {
+  .hero { padding: 40px 20px; }
+  .heroTitle { font-size: 36px; }
+  .imageWrapper { padding: 30px 20px; }
+  .image { height: 240px; }
+  .stackSection { padding: 32px 20px; }
+
+  .content {
+    grid-template-columns: 1fr;
+    padding: 30px 20px 40px;
+  }
+
+  .section:nth-child(5) {
+    grid-column: span 1;
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}

@@ -36,24 +36,12 @@ function Projects() {
               </div>
 
               <div className={styles.footer}>
-                <a
-                  href={project.live}
-                  target="_blank"
-                  rel="noopener noreferrer"
+                <Link
+                  to={`/projects/${project.slug}`}
                   className={styles.btnPrimary}
                 >
-                  Voir le projet
-                </a>
-                {project.github && (
-                  <a
-                    href={project.github}
-                    target="_blank"
-                    rel="noreferrer"
-                    className={styles.btnSecondary}
-                  >
-                    GitHub
-                  </a>
-                )}
+                  Voir détail
+                </Link>
               </div>
 
             </div>
