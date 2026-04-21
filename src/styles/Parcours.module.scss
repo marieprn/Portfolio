@@ -1,0 +1,118 @@
+@use 'variables' as *;
+
+.parcours {
+  background: $cream;
+  padding: 30px 80px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+  min-height: 100vh;
+
+  h2 {
+    font-family: $font-serif;
+    font-style: italic;
+    font-size: 24px;
+    color: $brown;
+    margin-bottom: 16px;
+  }
+}
+
+.tag {
+  font-size: 45px;
+  font-weight: 500;
+  color: $terra;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  width: 100%;
+  max-width: 960px;
+}
+
+.card {
+  border-radius: $radius-xl;
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  transition: transform 0.2s;
+
+  &:first-child { background: $yellow; }
+  &:last-child  { background: $blue; }
+
+  &:hover { transform: translateY(-4px); }
+
+  h3 {
+    font-family: $font-serif;
+    font-style: italic;
+    font-size: 22px;
+    color: $brown;
+  }
+}
+
+.cardHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.icon {
+  font-size: 28px;
+  color: $brown;
+}
+
+.period {
+  font-size: 12px;
+  font-weight: 500;
+  color: $brown;
+  background: rgba($brown, 0.1);
+  padding: 4px 12px;
+  border-radius: 20px;
+}
+
+.place {
+  font-size: 13px;
+  font-weight: 500;
+  color: darken($brown, 5%);
+  opacity: 0.7;
+}
+
+.desc {
+  font-size: 14px;
+  color: $brown;
+  line-height: 1.8;
+  opacity: 0.85;
+}
+
+.tags {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+  margin-top: 4px;
+
+  span {
+    font-size: 11px;
+    font-weight: 500;
+    padding: 3px 10px;
+    border-radius: 20px;
+    background: $cream;
+    color: $brown;
+  }
+}
+
+@media (max-width: 768px) {
+  .parcours {
+    padding: 40px 20px;
+
+    h2 { font-size: 28px; }
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
