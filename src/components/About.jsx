@@ -8,17 +8,17 @@ function About() {
       <div className={styles.cards}>
         <div className={styles.textCard}>
           <p>
-            Après plusieurs années dans l'aide à domicile, j'ai choisi de me
-            reconvertir dans le développement web — avec la même conviction :
-            ce qu'on construit doit être utile, clair et accessible à tous.
+            Développeuse frontend spécialisée en React et SCSS, je crée des interfaces 
+            modernes, accessibles et responsive. J'intègre l'IA comme outil de travail 
+            au quotidien — pour coder plus efficacement, déboguer et apprendre plus vite.
           </p>
           <p>
-            Formée chez OpenClassrooms, je me spécialise en frontend : HTML
-            sémantique, CSS, JavaScript, React et SCSS. J'accorde une attention
-            particulière à l'accessibilité et au responsive.
+            Formée chez OpenClassrooms, j'ai travaillé sur des projets concrets couvrant 
+            la création d'applications React, l'optimisation SEO et l'accessibilité WCAG. 
+            Ce portfolio en est le reflet direct.
           </p>
           <p>
-            Je recherche un premier poste en CDI pour continuer à progresser
+            Je recherche un premier poste en CDI pour continuer à progresser 
             au sein d'une équipe — startup, agence, grand groupe ou structure à impact.
           </p>
         </div>

@@ -6,6 +6,8 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  border-bottom: 1px solid $brown;
+  position: relative;
 }
 
 .logo {
@@ -34,7 +36,7 @@
 
 .cvBtn {
   background: $terra;
-  color: $brown;
+  color: $brown !important;
   padding: 8px 20px;
   border-radius: 20px;
   font-size: 13px !important;
@@ -44,23 +46,87 @@
   &:hover { background: $rust; }
 }
 
-@media (max-width: 768px) {
-  .navbar {
-    padding: 12px 20px;
+/* BURGER */
+
+.burger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+}
+
+.burgerLine {
+  width: 24px;
+  height: 2px;
+  background: $brown;
+  border-radius: 2px;
+  transition: all 0.2s;
+  display: block;
+}
+
+.burgerLineOpen {
+  width: 24px;
+  height: 2px;
+  background: $terra;
+  border-radius: 2px;
+  display: block;
+
+  &:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
   }
 
-  .logo {
-    font-size: 20px;
+  &:nth-child(2) {
+    opacity: 0;
+  }
+
+  &:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
+  }
+}
+
+/*MENU MOBILE*/
+
+.mobileMenu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background: $cream;
+  border-bottom: 1px solid $brown;
+  display: flex;
+  flex-direction: column;
+  padding: 20px 24px;
+  gap: 16px;
+  z-index: 99;
+
+  a {
+    font-size: 16px;
+    color: $brown;
+    text-decoration: none;
+    font-weight: 500;
+    padding: 8px 0;
+    border-bottom: 1px solid rgba($brown, 0.1);
+    transition: color 0.2s;
+
+    &:hover { color: $terra; }
+
+    &:last-child { border-bottom: none; }
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    padding: 14px 20px;
   }
 
   .links {
-    gap: 12px;
-
-    a { font-size: 12px; }
+    display: none;
   }
 
-  .cvBtn {
-    padding: 6px 12px;
-    font-size: 11px !important;
+  .burger {
+    display: flex;
   }
 }
