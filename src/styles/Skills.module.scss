@@ -2,12 +2,12 @@
 
 .skills {
   background: $cream;
-  padding: 50px 80px;
+  padding: 80px 80px;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 12px;
-  min-height: 100vh;
+  /*min-height: 100vh;*/
 
   h2 {
     font-family: $font-serif;
