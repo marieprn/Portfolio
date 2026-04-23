@@ -9,7 +9,7 @@ const projects = [
       '/images/Kasa/Kasa2.webp',
     ],
     github: 'https://github.com/marieprns/kasa',
-    live: 'https://kasa-my-react.vercel.app',
+    live: 'https://kasa-my-react-q1ioirn6r-marieprns-projects.vercel.app/',
     context: 'Mission freelance fictive pour Kasa, leader français de la location entre particuliers. L\'entreprise migrait son site legacy ASP.NET vers une stack JavaScript moderne. J\'ai travaillé à partir de maquettes Figma et de données JSON simulées, en l\'absence de back-end.',
     objective: 'Implémenter le front-end de l\'application en utilisant React et React Router pour créer une expérience utilisateur moderne et réactive, en respectant les maquettes fournies et en structurant le code en composants réutilisables.',
     skills: [
