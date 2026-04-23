@@ -11,7 +11,7 @@ function Parcours() {
         <div className={styles.card}>
           <div className={styles.cardHeader}>
             <FaGraduationCap className={styles.icon} />
-            <span className={styles.period}>2023 — 2025</span>
+            <span className={styles.period}>2025 — 2026</span>
           </div>
           <h3>Formation Intégrateur Web</h3>
           <p className={styles.place}>OpenClassrooms</p>
@@ -32,7 +32,7 @@ function Parcours() {
         <div className={styles.card}>
           <div className={styles.cardHeader}>
             <FaHeart className={styles.icon} />
-            <span className={styles.period}>2018 — 2023</span>
+            <span className={styles.period}>2019 — 2025</span>
           </div>
           <h3>Responsable secteur / Auxiliaire de vie</h3>
           <p className={styles.place}>Aide à domicile</p>
