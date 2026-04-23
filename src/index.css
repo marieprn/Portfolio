@@ -74,3 +74,12 @@ html {
 :focus:not(:focus-visible) {
   outline: none;
 }
+
+main {
+  animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
