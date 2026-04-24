@@ -1,12 +1,13 @@
 import { useParams, Link } from 'react-router-dom'
 import projects from '../data/projects'
 import styles from '../styles/ProjectDetail.module.scss'
+import NotFound from './NotFound'
 
 function ProjectDetail() {
   const { slug } = useParams()
   const project = projects.find((p) => p.slug === slug)
 
-  if (!project) return <p>Projet introuvable</p>
+  if (!project) return <NotFound />
 
   return (
     <main className={styles.detail}>
@@ -16,7 +17,6 @@ function ProjectDetail() {
         <Link to="/#projets" className={styles.back}>
           ← Retour aux projets
         </Link>
-        <span className={styles.topBarTitle}>{project.title}</span>
         <div className={styles.topBarActions}>
           <a href={project.live} target="_blank" rel="noreferrer" className={styles.topBarBtn}>
             Voir le site ↗
