@@ -8,7 +8,7 @@ const projects = [
       '/images/Kasa/Kasa1.webp',
       '/images/Kasa/Kasa2.webp',
     ],
-    github: 'https://github.com/marieprns/kasa',
+    github: 'https://github.com/marieprn/Kasa-my-React-App',
     live: 'https://kasa-my-react-q1ioirn6r-marieprns-projects.vercel.app/',
     context: 'Mission freelance fictive pour Kasa, leader français de la location entre particuliers. L\'entreprise migrait son site legacy ASP.NET vers une stack JavaScript moderne. J\'ai travaillé à partir de maquettes Figma et de données JSON simulées, en l\'absence de back-end.',
     objective: 'Implémenter le front-end de l\'application en utilisant React et React Router pour créer une expérience utilisateur moderne et réactive, en respectant les maquettes fournies et en structurant le code en composants réutilisables.',
@@ -32,7 +32,7 @@ const projects = [
     images: [
       '/images/Nina/Nina1.webp',
       '/images/Nina/Nina2.webp'],
-    github: 'https://github.com/marieprns/nina-carducci',
+    github: 'https://github.com/marieprn/Nina-Carducci',
     live: 'https://nina-carducci-steel.vercel.app',
     context: 'Mission freelance fictive pour Nina Carducci, photographe portrait et événementiel à Bordeaux. Son site était lent à charger et invisible sur Google, ce qui l\'empêchait d\'acquérir de nouveaux clients.',
     objective: 'Travailler en tant que développeuse freelance pour optimiser le référencement du site en améliorant sa performance et son accessibilité. Identifier les problèmes de chargement et de référencement, proposer des recommandations et les appliquer directement dans le code.',
